@@ -1,4 +1,4 @@
-FROM dockerfile/ubuntu
+FROM ubuntu
 COPY ./install.sh /tmp/install.sh
 RUN /tmp/install.sh
 
