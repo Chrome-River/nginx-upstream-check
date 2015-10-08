@@ -22,5 +22,4 @@ rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 rm -fr /tmp/*
 
 mkdir /etc/nginx/conf.d
-echo "daemon off;" >> /etc/nginx/nginx.conf
 echo "include /etc/nginx/conf.d/*.conf;" >> /etc/nginx/nginx.conf
