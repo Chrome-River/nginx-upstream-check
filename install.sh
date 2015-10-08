@@ -21,6 +21,7 @@ apt-get clean
 rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 rm -fr /tmp/*
 
+mkdir /var/log/nginx
 mkdir /etc/nginx/conf.d
 rm -fr /etc/nginx/*.default
-adduser --system --no-create-home --user-group -s /sbin/nologin nginx
+adduser --system --no-create-home --shell /bin/false --group --disabled-login nginx
