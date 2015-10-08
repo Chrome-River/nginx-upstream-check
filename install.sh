@@ -12,7 +12,7 @@ tar -xzvf nginx-1.9.5.tar.gz
 cd nginx-1.9.5
 patch -p0 < ../nginx_upstream_check_module/check_1.9.2+.patch
 #patch -p1 -i  ../ngx_ustats_module/nginx-1.9+.patch
-./configure --add-module=../nginx_upstream_check_module --with-http_ssl_module --prefix=/usr --conf-path=/etc/nginx/nginx.conf
+./configure --add-module=../nginx_upstream_check_module --with-http_ssl_module --prefix=/usr --conf-path=/etc/nginx/nginx.conf --user=nginx --group=nginx
 make
 make install
 apt-get remove -y git gcc libssl-dev libpcre3-dev
@@ -23,3 +23,4 @@ rm -fr /tmp/*
 
 mkdir /etc/nginx/conf.d
 rm -fr /etc/nginx/*.default
+adduser --system --no-create-home --user-group -s /sbin/nologin nginx
