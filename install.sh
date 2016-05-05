@@ -21,7 +21,6 @@ patch -p0 < ../nginx_upstream_check_module/check_1.9.2+.patch
     --with-http_random_index_module \
     --with-http_secure_link_module \
     --with-http_degradation_module \
-    --with-http_perl_module \
     --with-mail \
     --with-file-aio \
     --with-ipv6 \
